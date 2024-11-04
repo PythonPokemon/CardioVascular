@@ -78,7 +78,7 @@ namespace CardioVaskular.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CardioVaskular;component/views/outlookview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CardioVaskular;V1.0.0.0;component/views/outlookview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\OutlookView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CardioVaskular")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65802f711c692ec4ad6ead7c60d680ca44f43d03")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c914a283fd6b955e916662efab75aff3c7fe727")]
 [assembly: System.Reflection.AssemblyProductAttribute("CardioVaskular")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CardioVaskular")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

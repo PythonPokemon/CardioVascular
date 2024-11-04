@@ -5640,11 +5640,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jakob.derzapf\\source\\repos\\Cardioaskular\\ModulTest\\ModulTest.csproj",
+      "projectUniqueName": "C:\\Users\\jakob.derzapf\\Source\\Repos\\CardioVascular\\ModulTest\\ModulTest.csproj",
       "projectName": "ModulTest",
-      "projectPath": "C:\\Users\\jakob.derzapf\\source\\repos\\Cardioaskular\\ModulTest\\ModulTest.csproj",
+      "projectPath": "C:\\Users\\jakob.derzapf\\Source\\Repos\\CardioVascular\\ModulTest\\ModulTest.csproj",
       "packagesPath": "C:\\Users\\jakob.derzapf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jakob.derzapf\\source\\repos\\Cardioaskular\\ModulTest\\obj\\",
+      "outputPath": "C:\\Users\\jakob.derzapf\\Source\\Repos\\CardioVascular\\ModulTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jakob.derzapf\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5662,8 +5662,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\jakob.derzapf\\source\\repos\\Cardioaskular\\Cardioaskular\\CardioVaskular.csproj": {
-              "projectPath": "C:\\Users\\jakob.derzapf\\source\\repos\\Cardioaskular\\Cardioaskular\\CardioVaskular.csproj"
+            "C:\\Users\\jakob.derzapf\\Source\\Repos\\CardioVascular\\Cardioaskular\\CardioVaskular.csproj": {
+              "projectPath": "C:\\Users\\jakob.derzapf\\Source\\Repos\\CardioVascular\\Cardioaskular\\CardioVaskular.csproj"
             }
           }
         }
