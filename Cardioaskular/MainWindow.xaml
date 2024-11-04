@@ -1,0 +1,97 @@
+﻿<Window x:Class="CardioVaskular.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CardioVaskular"
+        xmlns:views="clr-namespace:CardioVaskular.Views"
+        xmlns:wpfToolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+       
+        Title="CardioVaskular" Height="450" Width="800">
+
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Content="JBS3 CardioVaskular Risk Assessment" FontSize="16" Margin="10,0,0,0"  />
+
+        <Viewbox Grid.Row="0" HorizontalAlignment="Left" Margin="10,20,0,0">
+            
+            <DockPanel  HorizontalAlignment="Left" Margin="0,60,0,0">
+
+                <DockPanel  Grid.Row="0" Margin="5,5,5,5">
+                    
+                    <Label DockPanel.Dock="Top" Content="Profile" HorizontalAlignment="Center" FontSize="80"/>
+                    <RadioButton Click="ShowProfileView" IsChecked="{Binding IsProfilePageSelected}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5,5,5,5"  >
+                        <Image Source="C:\Users\jakob.derzapf\Pictures\Screenshots\bild6.png" HorizontalAlignment="Left" Margin="5,5,5,5"  />
+                    </RadioButton>
+                </DockPanel>
+
+                <DockPanel Grid.Row="0" Margin="5,5,5,5">
+                    <Label DockPanel.Dock="Top" Content="Heart Age" HorizontalAlignment="Center" FontSize="80"/>
+                    <RadioButton Click="ShowHeartAgeView" IsChecked="{Binding IsProfilePageSelected}" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                        <Image Source="C:\Users\jakob.derzapf\Pictures\Screenshots\bild7.png" HorizontalAlignment="Left" Margin="5,5,5,5"  />
+                    </RadioButton>
+                </DockPanel>
+
+                <DockPanel Grid.Row="0" Margin="5,5,5,5">
+                    <Label DockPanel.Dock="Top" Content="Healthy Years" HorizontalAlignment="Center" FontSize="80"/>
+                    <RadioButton Click="ShowHealthyYearsView" IsChecked="{Binding IsProfilePageSelected}" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Image Source="C:\Users\jakob.derzapf\Pictures\Screenshots\bild8.png"  />
+                    </RadioButton>
+                </DockPanel>
+
+                <DockPanel Grid.Row="0" Margin="5,5,5,5">
+                    <Label DockPanel.Dock="Top" Content="Outlook" HorizontalAlignment="Center" FontSize="80"/>
+                    <RadioButton Click="ShowOutlookView" IsChecked="{Binding IsProfilePageSelected}" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Image Source="C:\Users\jakob.derzapf\Pictures\Screenshots\bild9.png"  />
+                    </RadioButton>
+                </DockPanel>
+            </DockPanel>
+        </Viewbox>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--Vorher Mit Buttons-->
+        <!--Bild 1: Profil-->
+        <!--<Button Click="ShowProfileView" Width="75" Height="50" Margin="10,45,715,5" HorizontalAlignment="Left"  >
+            <Image Source="C:\Users\jakob.derzapf\Pictures\Screenshots\bild6.png"  />
+        </Button>-->
+
+        <!--Bild 2: HeartAgeView-->
+        <!--<Button x:Name="HeartAgeView" Click="ShowHeartAgeView"  Width="75" Height="50" Margin="90,45,635,5" HorizontalAlignment="Left" >
+            <Image Source="C:\Users\jakob.derzapf\Pictures\Screenshots\bild7.png"  />
+        </Button>-->
+
+        <!--Bild 3: HealthyYearsView-->
+        <!--<Button Click="ShowHealthyYearsView"  Width="75" Height="50" Margin="170,45,555,5" HorizontalAlignment="Left" >
+            <Image Source="C:\Users\jakob.derzapf\Pictures\Screenshots\bild8.png" />
+        </Button>-->
+
+        <!--Bild 4: OutlookView-->
+        <!--<Button Click="ShowOutlookView"  Width="75" Height="50" Margin="250,45,475,5" HorizontalAlignment="Left" >
+            <Image Source="C:\Users\jakob.derzapf\Pictures\Screenshots\bild9.png"  />
+        </Button>-->
+
+        <!--<Button Content="more" Height="25"   Width="45" Margin="330,58,425,17" HorizontalAlignment="Left" />-->
+
+
+        <!-- Hier wird der Inhalt der Views geladen -->
+        <ContentControl x:Name="MainContent" Grid.Row="1" Content="{Binding SelectedPage}" Margin="0,2,0,0"/>
+
+    </Grid>
+</Window>
