@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\jakob.derzapf\\source\\repos\\CardioVascular\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E77E9BD8-6351-4C9A-8921-BF2DE9EE7DE0}|Cardioaskular\\CardioVaskular.csproj|c:\\users\\jakob.derzapf\\source\\repos\\cardiovascular\\cardioaskular\\views\\profileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E77E9BD8-6351-4C9A-8921-BF2DE9EE7DE0}|Cardioaskular\\CardioVaskular.csproj|solutionrelative:cardioaskular\\views\\profileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E77E9BD8-6351-4C9A-8921-BF2DE9EE7DE0}|Cardioaskular\\CardioVaskular.csproj|c:\\users\\jakob.derzapf\\source\\repos\\cardiovascular\\cardioaskular\\models\\profilemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E77E9BD8-6351-4C9A-8921-BF2DE9EE7DE0}|Cardioaskular\\CardioVaskular.csproj|solutionrelative:cardioaskular\\models\\profilemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E77E9BD8-6351-4C9A-8921-BF2DE9EE7DE0}|Cardioaskular\\CardioVaskular.csproj|c:\\users\\jakob.derzapf\\source\\repos\\cardiovascular\\cardioaskular\\views\\profileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E77E9BD8-6351-4C9A-8921-BF2DE9EE7DE0}|Cardioaskular\\CardioVaskular.csproj|solutionrelative:cardioaskular\\views\\profileview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E77E9BD8-6351-4C9A-8921-BF2DE9EE7DE0}|Cardioaskular\\CardioVaskular.csproj|c:\\users\\jakob.derzapf\\source\\repos\\cardiovascular\\cardioaskular\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -64,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProfileView.xaml",
               "DocumentMoniker": "C:\\Users\\jakob.derzapf\\source\\repos\\CardioVascular\\Cardioaskular\\Views\\ProfileView.xaml",
               "RelativeDocumentMoniker": "Cardioaskular\\Views\\ProfileView.xaml",
@@ -76,13 +76,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ProfileModel.cs",
               "DocumentMoniker": "C:\\Users\\jakob.derzapf\\source\\repos\\CardioVascular\\Cardioaskular\\Models\\ProfileModel.cs",
               "RelativeDocumentMoniker": "Cardioaskular\\Models\\ProfileModel.cs",
               "ToolTip": "C:\\Users\\jakob.derzapf\\source\\repos\\CardioVascular\\Cardioaskular\\Models\\ProfileModel.cs",
               "RelativeToolTip": "Cardioaskular\\Models\\ProfileModel.cs",
-              "ViewState": "AgIAAEsBAAAAAAAAAAAAAHsBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAALwBAAAAAAAAAAAAAOEBAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T07:42:34.065Z",
               "EditorCaption": ""

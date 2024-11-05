@@ -194,12 +194,12 @@
                 </StackPanel>
 
 
-                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,10,0,0"/>
-                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,34,0,0"/>
-                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,64,0,0"/>
-                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,91,0,0"/>
-                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,120,0,0"/>
-                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,149,0,0"/>
+                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" IsChecked="{Binding RelativeSource}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,10,0,0"/>
+                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" IsChecked="{Binding SufferFromDiabetes}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,34,0,0"/>
+                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" IsChecked="{Binding RelativeSuffersFromCVD}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,64,0,0"/>
+                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" IsChecked="{Binding ChronicKidneyDisease}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,91,0,0"/>
+                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" IsChecked="{Binding SufferedAtrialFibrillation}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,120,0,0"/>
+                <CheckBox Style="{StaticResource HoverCheckBoxStyle}" IsChecked="{Binding RheumatoidArthritis}" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"  Height="15" Width="16" Margin="0,149,0,0"/>
 
             </Grid>
 
@@ -211,32 +211,9 @@
                     <Button x:Name="NextButton" Content="Next"  VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" IsEnabled="False" />
                 </StackPanel>
             </StackPanel>
-            <Label Grid.Column="1" Content="BMI:" HorizontalAlignment="Left" Margin="302,8,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="14"/>
-
-            <!-- Fortschrittsbilder -->
-            <!--<Grid Grid.Column="1">
-                <Button Width="75" HorizontalAlignment="Left">
-                    <Image x:Name="a" Source="C:\\Users\\jakob.derzapf\\Pictures\\Screenshots\\bild6.png" VerticalAlignment="Center" Height="38"    Width="67"/>
-                </Button>
-
-                <Button Width="75" HorizontalAlignment="Left" Margin="80,0,0,0">
-                    <Image x:Name="b" Source="C:\\Users\\jakob.derzapf\\Pictures\\Screenshots\\bild7.png" VerticalAlignment="Center" Height="38"    Width="69" />
-                </Button>
-
-                <Button Width="75"  HorizontalAlignment="Left" Margin="160,0,0,0">
-                    <Image x:Name="c" Source="C:\\Users\\jakob.derzapf\\Pictures\\Screenshots\\bild8.png" VerticalAlignment="Top" Height="42"    Width="75" />
-                </Button>
-
-                <Button Width="75" HorizontalAlignment="Left" Margin="240,0,0,0">
-                    <Image x:Name="d" Source="C:\\Users\\jakob.derzapf\\Pictures\\Screenshots\\bild9.png" VerticalAlignment="Center"  Height="44"    Width="69" />
-                </Button>
-
-                <Button Content="more" HorizontalAlignment="Left" Margin="320,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="-0.247,-0.046" />
-            </Grid>
-
-            -->
-            <!-- Hier wird der Inhalt der Views geladen -->
+            <Label Grid.Column="1" Content="BMI:" HorizontalAlignment="Left" Margin="302,8,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="14"/>  
             
+            <!-- Hier wird der Inhalt der Views geladen -->
             <ContentControl x:Name="MainContent" Grid.Row="1" />
             
 

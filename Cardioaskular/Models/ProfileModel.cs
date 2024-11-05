@@ -94,7 +94,7 @@ namespace CardioVaskular.Models
                     male = value;
                     OnPropertyChanged(nameof(Male));
 
-                    // Automatisch auf 'Female' setzen, wenn 'Male' true ist
+                    // Automatisch 'Female' auf 'false' setzen, wenn 'Male' true ist
                     if (male)
                     {
                         Female = false;
@@ -114,10 +114,18 @@ namespace CardioVaskular.Models
                 if (female != value)
                 {
                     female = value;
+                    OnPropertyChanged(nameof(Female));
+
+                    // Automatisch 'Male' auf 'false' setzen, wenn 'Male' true ist
+                    if (female)
+                    {
+                        Male = false;
+                    }
                 }
             }
         }
 
+        //Frage wie man den Wert Speichert? der steht garnicht zur auswahl???
         private bool gender;
         public bool Gender
 
@@ -134,8 +142,8 @@ namespace CardioVaskular.Models
         }
         //----------------------------------------------------------------------------------------->Ethnic group<
         // String-Eigenschaft zur Speicherung der Ethnic Group Auswahl
-        private string ethnicGroup;
-        public string EthnicGroup
+        private string? ethnicGroup;
+        public string? EthnicGroup
         {
             get { return ethnicGroup; }
             set
@@ -286,8 +294,8 @@ namespace CardioVaskular.Models
         //----------------------------------------------------------------------------------------->Townsend quintile<
 
         // String-Eigenschaft zur Speicherung der 'Townsend quintile' Auswahl
-        private string townsendQuintile;
-        public string TownsendQuintile
+        private string? townsendQuintile;
+        public string? TownsendQuintile
         {
             get { return townsendQuintile; }
             set
@@ -354,8 +362,8 @@ namespace CardioVaskular.Models
 
         //----------------------------------------------------------------------------------------->Do you smoke<
         // String-Eigenschaft zur Speicherung der 'do you smoke' Auswahl
-        private string doYouSmoke;
-        public string DoYouSmoke
+        private string? doYouSmoke;
+        public string? DoYouSmoke
         {
             get { return doYouSmoke; }
             set
@@ -418,18 +426,183 @@ namespace CardioVaskular.Models
         }
 
         //----------------------------------------------------------------------------------------->Cholesterol & Blood Pressure (mmil/L & mg/dL)<
+        private double totalCholesterol;
+        public double TotalCholesterol
+        {
+            get { return totalCholesterol; }
+            set
+            {
+                if (totalCholesterol != value)
+                {
+                    totalCholesterol = Math.Round(value, 2);
+                    if (totalCholesterol != 0)
+                    {
+                        NonHDLCholesterol = Math.Round(weight / Math.Pow(totalCholesterol, 2), 2);
+                        OnPropertyChanged(nameof(NonHDLCholesterol));
+                    }
+                    // System.Diagnostics.Debug.WriteLine(height);
+                }
+            }
+        }
+
+        private double hdlCholesterol;
+
+        public double HdlCholesterol
+        {
+            get { return hdlCholesterol; }
+            set
+            {
+                if (hdlCholesterol != value)
+                {
+                    hdlCholesterol = Math.Round(value, 2);
+                    if (hdlCholesterol != 0)
+                    {
+                        NonHDLCholesterol = Math.Round(hdlCholesterol / Math.Pow(totalCholesterol, 2), 2);
+                        OnPropertyChanged(nameof(NonHDLCholesterol));
+                    }
+                    // System.Diagnostics.Debug.WriteLine(weight);
+                }
+            }
+        }
+
+        private double nonHDLCholesterol;
+
+        public double NonHDLCholesterol
+        {
+            get { return nonHDLCholesterol; }
+            set
+            {
+                if (nonHDLCholesterol != value)
+                {
+                    nonHDLCholesterol = Math.Round(value, 2);
+                    // System.Diagnostics.Debug.WriteLine(bmi);
+                }
+            }
+        }
+
 
         //----------------------------------------------------------------------------------------->Lots of CheckBoxes (right side)<
+        // Eigenschaften für jede CheckBox 
+        // Checkbox 1
+        private bool receivedBloodPressureTreatment;
+        public bool ReceivedBloodPressureTreatment
+        {
+            get { return receivedBloodPressureTreatment; }
+            set
+            {
+                if (receivedBloodPressureTreatment != value)
+                {
+                    receivedBloodPressureTreatment = value;
+                    OnPropertyChanged(nameof(ReceivedBloodPressureTreatment));
+                }
+            }
+        }
+
+        // Checkbox 2
+        private bool sufferFromDiabetes;
+        public bool SufferFromDiabetes
+        {
+            get {return sufferFromDiabetes; }
+            set
+            {
+                if (sufferFromDiabetes != value)
+                {
+                    sufferFromDiabetes = value;
+                    OnPropertyChanged(nameof(SufferFromDiabetes));
+                }
+            }
+        }
+
+        // Checkbox 3
+        private bool relativeSuffersFromCVD;
+        public bool RelativeSuffersFromCVD
+        {
+            get { return relativeSuffersFromCVD; }
+            set
+            {
+                if (relativeSuffersFromCVD != value)
+                {
+                    relativeSuffersFromCVD = value;
+                    OnPropertyChanged(nameof(RelativeSuffersFromCVD));
+                }
+            }
+        }
+
+        // Checkbox 4
+        private bool chronicKidneyDisease;
+        public bool ChronicKidneyDisease
+        {
+            get { return chronicKidneyDisease; }
+            set
+            {
+                if (chronicKidneyDisease != value)
+                {
+                    chronicKidneyDisease = value;
+                    OnPropertyChanged(nameof(ChronicKidneyDisease));
+                }
+            }
+        }
+
+        // Checkbox 5
+        private bool sufferedAtrialFibrillation;
+        public bool SufferedAtrialFibrillation
+        {
+            get { return sufferedAtrialFibrillation; }
+            set
+            {
+                if (sufferedAtrialFibrillation != value)
+                {
+                    sufferedAtrialFibrillation = value;
+                    OnPropertyChanged(nameof(SufferedAtrialFibrillation));
+                }
+            }
+        }
+
+        // Checkbox 6
+        private bool rheumatoidArthritis;
+        public bool RheumatoidArthritis
+        {
+            get { return rheumatoidArthritis; }
+            set
+            {
+                if (rheumatoidArthritis != value)
+                {
+                    rheumatoidArthritis = value;
+                    OnPropertyChanged(nameof(RheumatoidArthritis));
+                }
+            }
+        }
+
+        // Methode, um alle ausgewählten CheckBoxen als Liste von Strings zurückzugeben
+        public List<string> GetSelectedConditions()
+        {
+            var selectedConditions = new List<string>();
+
+            if (ReceivedBloodPressureTreatment)
+                selectedConditions.Add("Received blood pressure treatment");
+            if (SufferFromDiabetes)
+                selectedConditions.Add("Suffer from diabetes");
+            if (RelativeSuffersFromCVD)
+                selectedConditions.Add("Relative suffers from CVD");
+            if (ChronicKidneyDisease)
+                selectedConditions.Add("Chronic kidney disease");
+            if (SufferedAtrialFibrillation)
+                selectedConditions.Add("Suffered atrial fibrillation");
+            if (RheumatoidArthritis)
+                selectedConditions.Add("Rheumatoid arthritis");
+
+            return selectedConditions;
+        }
 
         //----------------------------------------------------------------------------------------->Save / Load / Next<
         // sind in der code behind datei von 'ProfileView.xaml.cs'
 
         //----------------------------------------------------------------------------------------->EventHandler<
 
-        // Event, das ausgelöst wird, wenn sich eine Eigenschaft ändert
-        public event PropertyChangedEventHandler PropertyChanged;
+        // Event, das ausgelöst wird, wenn sich eine Eigenschaft ändert, oder auch anders formuliert, ein  Event für die Benachrichtigung der Benutzeroberfläche
+        public event PropertyChangedEventHandler? PropertyChanged;
 
-        // Methode zum Auslösen des PropertyChanged-Events
+        // Methode zum Auslösen des PropertyChanged-Events, oder auch anders formuliert, eine Methode zur Benachrichtigung der UI über Änderungen
         protected virtual void OnPropertyChanged(string propertyName)
         {
             //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
