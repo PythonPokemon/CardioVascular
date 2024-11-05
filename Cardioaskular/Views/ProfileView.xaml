@@ -141,8 +141,11 @@
             <Label Grid.Column="3" Content="Do you smoke?" HorizontalAlignment="Left" Margin="65,9,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="14"/>
             <ComboBox Grid.Column="3" HorizontalAlignment="Left" Margin="180,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180" Height="22" FontSize="14">
                 <ComboBoxItem Content="No" IsSelected="True" />
-                <ComboBoxItem Content="Yes"/>
-            </ComboBox>
+                <ComboBoxItem Content="I quit"/>
+                <ComboBoxItem Content="I smoke less than 10/day"/>
+                <ComboBoxItem Content="I smoke less than 20/day"/>
+                <ComboBoxItem Content="I smoke 20+/day"/>
+                </ComboBox>
             <Label Grid.Column="3" Content="Total Cholesterol:" HorizontalAlignment="Left" Margin="54,45,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="14"/>
             <Label Grid.Column="3" Content="HDL Cholesterol:" HorizontalAlignment="Left" Margin="54,70,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="14"/>
             <Label Grid.Column="3" Content="NonHDL Cholesterol: 4.3" HorizontalAlignment="Left" Margin="54,100,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2" FontSize="14"/>
