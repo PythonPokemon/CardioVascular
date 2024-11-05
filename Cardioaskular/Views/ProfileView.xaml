@@ -61,10 +61,10 @@
             <!--/Height and Weight/-->
             <Label Grid.Column="1" Content="Height (m):" HorizontalAlignment="Left" Margin="15,4,0,0" Grid.Row="2" VerticalAlignment="Top"  FontSize="14"/>
             <Label Grid.Column="1" Content="Weight (kg):" HorizontalAlignment="Left" Margin="153,7,0,0" Grid.Row="2" VerticalAlignment="Top"  FontSize="14"/>
-            <Label Grid.Column="1" Content="{Binding MyModel.Bmi, Mode=OneWay}" HorizontalAlignment="Left" Margin="335,8,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="14"/>
+            <Label Grid.Column="1" Content="{Binding BmiProfileData .Bmi, Mode=OneWay}" HorizontalAlignment="Left" Margin="335,8,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="14"/>
             <!-- BMI -->
-            <wpfToolkit:DoubleUpDown Grid.Row="2" HorizontalAlignment="Left"  Value="{Binding MyModel.Weight, Mode=TwoWay}" Minimum="0.1" Maximum="800" Increment="0.01" Grid.Column="1" Margin="243,7,0,0"  VerticalAlignment="Top" Opacity="0.5" FontSize="14" Width="50"/>
-            <wpfToolkit:DoubleUpDown Grid.Row="2" HorizontalAlignment="Left"  Value="{Binding MyModel.Height, Mode=TwoWay}" Minimum="0.1" Maximum="3.0" Increment="0.01" Grid.Column="1" Margin="98,7,0,0"  VerticalAlignment="Top" Opacity="0.5" FontSize="14" Width="50"/>
+            <wpfToolkit:DoubleUpDown Grid.Row="2" HorizontalAlignment="Left"  Value="{Binding BmiProfileData .Weight, Mode=TwoWay}" Minimum="0.1" Maximum="800" Increment="0.01" Grid.Column="1" Margin="243,7,0,0"  VerticalAlignment="Top" Opacity="0.5" FontSize="14" Width="50"/>
+            <wpfToolkit:DoubleUpDown Grid.Row="2" HorizontalAlignment="Left"  Value="{Binding BmiProfileData .Height, Mode=TwoWay}" Minimum="0.1" Maximum="3.0" Increment="0.01" Grid.Column="1" Margin="98,7,0,0"  VerticalAlignment="Top" Opacity="0.5" FontSize="14" Width="50"/>
             <Label Grid.Row="2" Grid.Column="1" Content="5' 7'' (67.0'')" VerticalAlignment="Top" Width="50" Margin="98,34,0,0" Height="20" FontSize="9" HorizontalAlignment="Left" Opacity="0.5"/>
             <Label Grid.Row="2" Grid.Column="1" Content="10st 3.5 (143.5 lb)" VerticalAlignment="Top" Width="80" Margin="228,34,0,0" Height="20" FontSize="9" HorizontalAlignment="Left" Opacity="0.5"/>
             <!--/Townsend quintile/-->

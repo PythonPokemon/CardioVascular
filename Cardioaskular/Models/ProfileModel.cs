@@ -231,9 +231,6 @@ namespace CardioVaskular.Models
 
         //----------------------------------------------------------------------------------------->BMI<
         private double height;
-        private double weight;
-        private double bmi;
-
         public double Height
         {
             get
@@ -255,6 +252,7 @@ namespace CardioVaskular.Models
             }
         }
 
+        private double weight;
         public double Weight
         {
             get
@@ -276,6 +274,7 @@ namespace CardioVaskular.Models
             }
         }
 
+        private double bmi;
         public double Bmi
         {
             get
