@@ -132,9 +132,96 @@ namespace CardioVaskular.Models
                 }
             }
         }
+        //----------------------------------------------------------------------------------------->Ethnic group<
+        // String-Eigenschaft zur Speicherung der Ethnic Group Auswahl
+        private string ethnicGroup;
+        public string EthnicGroup
+        {
+            get { return ethnicGroup; }
+            set
+            {
+                if (ethnicGroup != value)
+                {
+                    ethnicGroup = value;
+                    OnPropertyChanged(nameof(EthnicGroup));
+                    UpdateEthnicGroupFlags(); // Methode, um bool-Werte zu setzen
+                }
+            }
+        }
+
+        // Bool-Werte für jede Ethnic Group
+        public bool IsWhiteOrNotStated { get; private set; }
+        public bool IsIndian { get; private set; }
+        public bool IsPakistani { get; private set; }
+        public bool IsBangladeshi { get; private set; }
+        public bool IsOtherAsian { get; private set; }
+        public bool IsBlackCaribbean { get; private set; }
+        public bool IsBlackAfrican { get; private set; }
+        public bool IsChinese { get; private set; }
+        public bool IsOtherEthnicGroup { get; private set; }
+
+        // Methode, um die bool-Werte basierend auf der EthnicGroup Auswahl zu setzen
+        private void UpdateEthnicGroupFlags()
+        {
+            // Alle bool-Werte auf false setzen
+            IsWhiteOrNotStated = false;
+            IsIndian = false;
+            IsPakistani = false;
+            IsBangladeshi = false;
+            IsOtherAsian = false;
+            IsBlackCaribbean = false;
+            IsBlackAfrican = false;
+            IsChinese = false;
+            IsOtherEthnicGroup = false;
+
+            // switch-Anweisung zur Auswahl
+            switch (ethnicGroup)
+            {
+                case "White or not stated":
+                    IsWhiteOrNotStated = true;
+                    break;
+                case "Indian":
+                    IsIndian = true;
+                    break;
+                case "Pakistani":
+                    IsPakistani = true;
+                    break;
+                case "Bangladeshi":
+                    IsBangladeshi = true;
+                    break;
+                case "Other Asian":
+                    IsOtherAsian = true;
+                    break;
+                case "Black Caribbean":
+                    IsBlackCaribbean = true;
+                    break;
+                case "Black African":
+                    IsBlackAfrican = true;
+                    break;
+                case "Chinese":
+                    IsChinese = true;
+                    break;
+                case "Other ethnic group":
+                    IsOtherEthnicGroup = true;
+                    break;
+            }
+
+            // Benachrichtigung über Änderungen an den bool-Werten
+            OnPropertyChanged(nameof(IsWhiteOrNotStated));
+            OnPropertyChanged(nameof(IsIndian));
+            OnPropertyChanged(nameof(IsPakistani));
+            OnPropertyChanged(nameof(IsBangladeshi));
+            OnPropertyChanged(nameof(IsOtherAsian));
+            OnPropertyChanged(nameof(IsBlackCaribbean));
+            OnPropertyChanged(nameof(IsBlackAfrican));
+            OnPropertyChanged(nameof(IsChinese));
+            OnPropertyChanged(nameof(IsOtherEthnicGroup));
+        }
 
 
-        //-----------------------------------------------------------------------------------------
+
+
+        //----------------------------------------------------------------------------------------->BMI<
         private double height;
         private double weight;
         private double bmi;
@@ -196,7 +283,7 @@ namespace CardioVaskular.Models
                 }
             }
         }
-        //-----------------------------------------------------------------------------------------
+        //----------------------------------------------------------------------------------------->EventHandler<
 
         // Event, das ausgelöst wird, wenn sich eine Eigenschaft ändert
         public event PropertyChangedEventHandler PropertyChanged;

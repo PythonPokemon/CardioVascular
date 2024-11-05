@@ -52,6 +52,7 @@
                 <ComboBoxItem Content="Indian"/>
                 <ComboBoxItem Content="Pakistan" />
                 <ComboBoxItem Content="Bangladeshi"/>
+                <ComboBoxItem Content="Other Asien"/>
                 <ComboBoxItem Content="Black Caribbean"/>
                 <ComboBoxItem Content="Black African"/>
                 <ComboBoxItem Content="Chinese"/>
