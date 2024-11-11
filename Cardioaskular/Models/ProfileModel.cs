@@ -288,6 +288,17 @@ namespace CardioVaskular.Models
                     bmi = Math.Round(value, 2);
                     // System.Diagnostics.Debug.WriteLine(bmi);
                 }
+
+                // Validierung: BMI-Wert muss mindestens 20 sein
+                if (bmi < 20)
+                {
+                    System.Windows.MessageBox.Show(
+                        "Der BMI-Wert ist zu niedrig. Der Wert sollte mindestens 20 betragen.",
+                        "Warnung",
+                        System.Windows.MessageBoxButton.OK,
+                        System.Windows.MessageBoxImage.Warning
+                    );
+                }
             }
         }
         //----------------------------------------------------------------------------------------->Townsend quintile<

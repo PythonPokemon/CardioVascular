@@ -117,19 +117,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jakob.derzapf\\.nuget\\packages\\": {}
+    "C:\\Users\\Student\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jakob.derzapf\\Source\\Repos\\CardioVascular\\Cardioaskular\\CardioVaskular.csproj",
+      "projectUniqueName": "C:\\Users\\Student\\Source\\Repos\\CardioVascular\\Cardioaskular\\CardioVaskular.csproj",
       "projectName": "CardioVaskular",
-      "projectPath": "C:\\Users\\jakob.derzapf\\Source\\Repos\\CardioVascular\\Cardioaskular\\CardioVaskular.csproj",
-      "packagesPath": "C:\\Users\\jakob.derzapf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jakob.derzapf\\Source\\Repos\\CardioVascular\\Cardioaskular\\obj\\",
+      "projectPath": "C:\\Users\\Student\\Source\\Repos\\CardioVascular\\Cardioaskular\\CardioVaskular.csproj",
+      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Student\\Source\\Repos\\CardioVascular\\Cardioaskular\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\jakob.derzapf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -137,7 +142,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
