@@ -141,7 +141,7 @@
                 <Label Grid.Column="3" Content="Do you smoke?" HorizontalAlignment="Left" Margin="65,9,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="14"/>
                 <ComboBox Grid.Column="3" HorizontalAlignment="Left" Margin="180,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="180" Height="22" FontSize="14">
                     <ComboBoxItem Content="No" IsSelected="True" />
-                    <ComboBoxItem Content="I quit"/>
+                    <ComboBoxItem Content="I quit" />
                     <ComboBoxItem Content="I smoke less than 10/day"/>
                     <ComboBoxItem Content="I smoke less than 20/day"/>
                     <ComboBoxItem Content="I smoke 20+/day"/>
@@ -216,7 +216,7 @@
 
                 <!-- Hier wird der Inhalt der Views geladen -->
                 <ContentControl x:Name="MainContent" Grid.Row="1" />
-                <Label Grid.Column="3" Content="{Binding Model.NonHDLCholesterol, Mode=TwoWay}" HorizontalAlignment="Left" Margin="194,104,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="39" Grid.RowSpan="2"/>
+                <Label Grid.Column="3" Content="{Binding Model.NonHDLCholesterol, Mode=OneWay}" HorizontalAlignment="Left" Margin="194,104,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="39" Grid.RowSpan="2"/>
 
 
             </Grid>

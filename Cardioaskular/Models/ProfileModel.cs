@@ -233,10 +233,7 @@ namespace CardioVaskular.Models
         private double height;
         public double Height
         {
-            get
-            {
-                return height;
-            }
+            get { return height; }
             set
             {
                 if (height != value)
@@ -255,10 +252,7 @@ namespace CardioVaskular.Models
         private double weight;
         public double Weight
         {
-            get
-            {
-                return weight;
-            }
+            get { return weight; }
             set
             {
                 if (weight != value)
@@ -370,6 +364,7 @@ namespace CardioVaskular.Models
         //----------------------------------------------------------------------------------------->Terms and Conditions<
         //sind in der code behind datei von 'ProfileView.xaml.cs'
 
+
         //----------------------------------------------------------------------------------------->Do you smoke<
         // String-Eigenschaft zur Speicherung der 'do you smoke' Auswahl
         private string? doYouSmoke;
@@ -395,6 +390,7 @@ namespace CardioVaskular.Models
         public bool IsSmokeOver20PerDay { get; private set; }
 
 
+
         // Methode, um die bool-Werte basierend auf der 'do you smoke' Auswahl zu setzen
         private void UpdateDoYouSmokeFlags()
         {
@@ -405,23 +401,22 @@ namespace CardioVaskular.Models
             IsSLT20PerDay = false;
             IsSmokeOver20PerDay = false;
 
-
-            // switch-Anweisung zur Auswahl
-            switch (townsendQuintile)
+            // Bool-Wert basierend auf der Auswahl von 'DoYouSmoke' setzen
+            switch (doYouSmoke)
             {
                 case "No":
                     IsNo = true;
                     break;
-                case "I quit":
+                case "Quit":
                     IsQuit = true;
                     break;
-                case "I smoke less than 10/day":
+                case "I smoke less then 10/day":
                     IsSLT10PerDay = true;
                     break;
-                case "I smoke less than 20/day":
+                case "I smoke less then 20/day":
                     IsSLT20PerDay = true;
                     break;
-                case "Least affluent":
+                case "I smoke 20+/day":
                     IsSmokeOver20PerDay = true;
                     break;
             }
@@ -445,18 +440,13 @@ namespace CardioVaskular.Models
                 if (totalCholesterol != value)
                 {
                     totalCholesterol = Math.Round(value, 2);
-                    if (totalCholesterol != 0)
-                    {
-                        NonHDLCholesterol = Math.Round(weight / Math.Pow(totalCholesterol, 2), 2);
-                        OnPropertyChanged(nameof(NonHDLCholesterol));
-                    }
-                    // System.Diagnostics.Debug.WriteLine(height);
+                    OnPropertyChanged(nameof(TotalCholesterol));
+                    UpdateCholesterolValues();
                 }
             }
         }
 
         private double hdlCholesterol;
-
         public double HdlCholesterol
         {
             get { return hdlCholesterol; }
@@ -465,30 +455,40 @@ namespace CardioVaskular.Models
                 if (hdlCholesterol != value)
                 {
                     hdlCholesterol = Math.Round(value, 2);
-                    if (hdlCholesterol != 0)
-                    {
-                        NonHDLCholesterol = Math.Round(hdlCholesterol / Math.Pow(totalCholesterol, 2), 2);
-                        OnPropertyChanged(nameof(NonHDLCholesterol));
-                    }
-                    // System.Diagnostics.Debug.WriteLine(weight);
+                    OnPropertyChanged(nameof(HdlCholesterol));
+                    UpdateCholesterolValues();
                 }
             }
         }
 
         private double nonHDLCholesterol;
-
         public double NonHDLCholesterol
         {
             get { return nonHDLCholesterol; }
-            set
+            private set
             {
                 if (nonHDLCholesterol != value)
                 {
                     nonHDLCholesterol = Math.Round(value, 2);
-                    // System.Diagnostics.Debug.WriteLine(bmi);
+                    OnPropertyChanged(nameof(NonHDLCholesterol));
                 }
             }
         }
+
+        // Methode zur Berechnung der Non-HDL-Cholesterinwerte
+        private void UpdateCholesterolValues()
+        {
+            if (totalCholesterol > 0 && hdlCholesterol > 0)
+            {
+                // Berechnung des Non-HDL-Cholesterins
+                NonHDLCholesterol = totalCholesterol - hdlCholesterol;
+            }
+            else
+            {
+                NonHDLCholesterol = 0;
+            }
+        }
+
 
 
         //----------------------------------------------------------------------------------------->Lots of CheckBoxes (right side)<
